@@ -43,7 +43,6 @@
 
 /* USER CODE BEGIN PV */
 
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -99,12 +98,11 @@ int main(void)
   //char str[] = {0x5a, 0xbd, 0x7e, 0x7e, 0xbd, 0x5a};
   char str[] = {0x70, 0x50, 0x5e, 0x50, 0x5c, 0x14};
   //0x0e, 0x0a, 0x7a, 0x0a, 0x3a, 0x28
-  //int ppm = 2;
-  //int ppm2 = 3;
-  //sprintf(str, "PPM: %d                    %d", ppm, ppm2);
+
+
 
   //LCD_print(str, 0, 0);
-
+  LCD_SetCursor(0, 2);
   for (int var = 0; var < 6; ++var) {
 
     LCD_write(str[var],LCD_DATA);

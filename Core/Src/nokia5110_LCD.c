@@ -404,3 +404,35 @@ void LCD_drawRectangle(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2){
   LCD_drawLine(x2, y1, x2, y2);
   LCD_drawLine(x1, y2, x2, y2);
 }
+
+
+///////////////////////////Custom Functions//////////////////////////////
+
+void LCD_SetCursor(unsigned char newX, unsigned char newY){
+  if((newX > 11) || (newY > 5)){        // bad input
+    return;                             // do nothing
+  }
+  // multiply newX by 7 because each character is 7 columns wide
+
+  LCD_write(0x80|(newX*7), LCD_COMMAND); // setting bit 7 updates X-position
+  LCD_write(0x40|newY, LCD_COMMAND);     // setting bit 6 updates Y-position
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
