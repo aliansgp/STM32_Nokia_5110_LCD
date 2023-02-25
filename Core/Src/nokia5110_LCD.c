@@ -411,7 +411,7 @@ void LCD_SetCursor(unsigned char newX, unsigned char newY){
   // multiply newX by 7 because each character is 7 columns wide
 
 
-  LCD_write(0x80 | newX, LCD_COMMAND); // setting bit 7 updates X-position
+  LCD_write(0x80 | (newX*7), LCD_COMMAND); // setting bit 7 updates X-position
   LCD_write(0x40 | newY, LCD_COMMAND);     // setting bit 6 updates Y-position
   iScreenOffset = (newY*84)+newX;
 
