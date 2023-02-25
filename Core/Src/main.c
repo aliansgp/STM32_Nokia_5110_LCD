@@ -109,7 +109,6 @@ int main(void)
 
   }
 
-
  // LCD_goXY(15, 0);
  // HAL_Delay(5);
   //LCD_print("Hello World!", 0, 15);

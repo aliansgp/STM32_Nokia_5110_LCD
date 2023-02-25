@@ -113,7 +113,7 @@ void LCD_invertText(bool mode);
 void LCD_putChar(char c);
 void LCD_print(char *str, uint8_t x, uint8_t y);
 void LCD_clrScr();
-void LCD_goXY(uint8_t x, uint8_t y);
+
 
 /*----- Draw Functions -----*/
 /*

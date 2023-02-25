@@ -204,8 +204,6 @@ Discarded input sections
                 0x0000000000000000       0x84 ./Core/Src/nokia5110_LCD.o
  .text.LCD_print
                 0x0000000000000000       0x3e ./Core/Src/nokia5110_LCD.o
- .text.LCD_goXY
-                0x0000000000000000       0x38 ./Core/Src/nokia5110_LCD.o
  .text.LCD_refreshScr
                 0x0000000000000000       0x58 ./Core/Src/nokia5110_LCD.o
  .text.LCD_refreshArea
@@ -2807,18 +2805,18 @@ LOAD d:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
 LOAD d:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
 LOAD d:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a
 
-.debug_info     0x0000000000000000     0x4746
+.debug_info     0x0000000000000000     0x4715
  .debug_info    0x0000000000000000      0x471 ./Core/Src/gpio.o
  .debug_info    0x0000000000000471      0x705 ./Core/Src/main.o
- .debug_info    0x0000000000000b76      0xa5b ./Core/Src/nokia5110_LCD.o
- .debug_info    0x00000000000015d1      0x2a8 ./Core/Src/stm32f4xx_hal_msp.o
- .debug_info    0x0000000000001879      0x121 ./Core/Src/stm32f4xx_it.o
- .debug_info    0x000000000000199a      0x523 ./Core/Src/system_stm32f4xx.o
- .debug_info    0x0000000000001ebd       0x22 ./Core/Startup/startup_stm32f407vgtx.o
- .debug_info    0x0000000000001edf      0x97c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_info    0x000000000000285b      0xe1b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_info    0x0000000000003676      0x76a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_info    0x0000000000003de0      0x966 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_info    0x0000000000000b76      0xa2a ./Core/Src/nokia5110_LCD.o
+ .debug_info    0x00000000000015a0      0x2a8 ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_info    0x0000000000001848      0x121 ./Core/Src/stm32f4xx_it.o
+ .debug_info    0x0000000000001969      0x523 ./Core/Src/system_stm32f4xx.o
+ .debug_info    0x0000000000001e8c       0x22 ./Core/Startup/startup_stm32f407vgtx.o
+ .debug_info    0x0000000000001eae      0x97c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_info    0x000000000000282a      0xe1b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_info    0x0000000000003645      0x76a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_info    0x0000000000003daf      0x966 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
 
 .debug_abbrev   0x0000000000000000     0x1236
  .debug_abbrev  0x0000000000000000      0x146 ./Core/Src/gpio.o
@@ -2833,42 +2831,42 @@ LOAD d:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .debug_abbrev  0x0000000000000dc8      0x1c4 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
  .debug_abbrev  0x0000000000000f8c      0x2aa ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
 
-.debug_aranges  0x0000000000000000      0x4e8
+.debug_aranges  0x0000000000000000      0x4e0
  .debug_aranges
                 0x0000000000000000       0x20 ./Core/Src/gpio.o
  .debug_aranges
                 0x0000000000000020       0x30 ./Core/Src/main.o
  .debug_aranges
-                0x0000000000000050       0xe0 ./Core/Src/nokia5110_LCD.o
+                0x0000000000000050       0xd8 ./Core/Src/nokia5110_LCD.o
  .debug_aranges
-                0x0000000000000130       0x20 ./Core/Src/stm32f4xx_hal_msp.o
+                0x0000000000000128       0x20 ./Core/Src/stm32f4xx_hal_msp.o
  .debug_aranges
-                0x0000000000000150       0x60 ./Core/Src/stm32f4xx_it.o
+                0x0000000000000148       0x60 ./Core/Src/stm32f4xx_it.o
  .debug_aranges
-                0x00000000000001b0       0x28 ./Core/Src/system_stm32f4xx.o
+                0x00000000000001a8       0x28 ./Core/Src/system_stm32f4xx.o
  .debug_aranges
-                0x00000000000001d8       0x28 ./Core/Startup/startup_stm32f407vgtx.o
+                0x00000000000001d0       0x28 ./Core/Startup/startup_stm32f407vgtx.o
  .debug_aranges
-                0x0000000000000200       0xf0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+                0x00000000000001f8       0xf0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
  .debug_aranges
-                0x00000000000002f0      0x118 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+                0x00000000000002e8      0x118 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
  .debug_aranges
-                0x0000000000000408       0x58 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+                0x0000000000000400       0x58 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
  .debug_aranges
-                0x0000000000000460       0x88 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+                0x0000000000000458       0x88 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
 
-.debug_ranges   0x0000000000000000      0x458
+.debug_ranges   0x0000000000000000      0x450
  .debug_ranges  0x0000000000000000       0x10 ./Core/Src/gpio.o
  .debug_ranges  0x0000000000000010       0x20 ./Core/Src/main.o
- .debug_ranges  0x0000000000000030       0xe8 ./Core/Src/nokia5110_LCD.o
- .debug_ranges  0x0000000000000118       0x10 ./Core/Src/stm32f4xx_hal_msp.o
- .debug_ranges  0x0000000000000128       0x50 ./Core/Src/stm32f4xx_it.o
- .debug_ranges  0x0000000000000178       0x18 ./Core/Src/system_stm32f4xx.o
- .debug_ranges  0x0000000000000190       0x20 ./Core/Startup/startup_stm32f407vgtx.o
- .debug_ranges  0x00000000000001b0       0xe0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_ranges  0x0000000000000290      0x108 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_ranges  0x0000000000000398       0x48 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_ranges  0x00000000000003e0       0x78 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_ranges  0x0000000000000030       0xe0 ./Core/Src/nokia5110_LCD.o
+ .debug_ranges  0x0000000000000110       0x10 ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_ranges  0x0000000000000120       0x50 ./Core/Src/stm32f4xx_it.o
+ .debug_ranges  0x0000000000000170       0x18 ./Core/Src/system_stm32f4xx.o
+ .debug_ranges  0x0000000000000188       0x20 ./Core/Startup/startup_stm32f407vgtx.o
+ .debug_ranges  0x00000000000001a8       0xe0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_ranges  0x0000000000000288      0x108 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_ranges  0x0000000000000390       0x48 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_ranges  0x00000000000003d8       0x78 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
 
 .debug_macro    0x0000000000000000    0x1f15c
  .debug_macro   0x0000000000000000      0x1c4 ./Core/Src/gpio.o
@@ -2920,41 +2918,41 @@ LOAD d:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .debug_macro   0x000000000001edd2      0x1b6 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
  .debug_macro   0x000000000001ef88      0x1d4 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
 
-.debug_line     0x0000000000000000     0x5d97
+.debug_line     0x0000000000000000     0x5d7e
  .debug_line    0x0000000000000000      0x686 ./Core/Src/gpio.o
  .debug_line    0x0000000000000686      0x749 ./Core/Src/main.o
- .debug_line    0x0000000000000dcf      0xd82 ./Core/Src/nokia5110_LCD.o
- .debug_line    0x0000000000001b51      0x676 ./Core/Src/stm32f4xx_hal_msp.o
- .debug_line    0x00000000000021c7      0x739 ./Core/Src/stm32f4xx_it.o
- .debug_line    0x0000000000002900      0x6f8 ./Core/Src/system_stm32f4xx.o
- .debug_line    0x0000000000002ff8       0x88 ./Core/Startup/startup_stm32f407vgtx.o
- .debug_line    0x0000000000003080      0x95e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_line    0x00000000000039de      0xc0d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_line    0x00000000000045eb      0xad2 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_line    0x00000000000050bd      0xcda ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_line    0x0000000000000dcf      0xd69 ./Core/Src/nokia5110_LCD.o
+ .debug_line    0x0000000000001b38      0x676 ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_line    0x00000000000021ae      0x739 ./Core/Src/stm32f4xx_it.o
+ .debug_line    0x00000000000028e7      0x6f8 ./Core/Src/system_stm32f4xx.o
+ .debug_line    0x0000000000002fdf       0x88 ./Core/Startup/startup_stm32f407vgtx.o
+ .debug_line    0x0000000000003067      0x95e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_line    0x00000000000039c5      0xc0d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_line    0x00000000000045d2      0xad2 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_line    0x00000000000050a4      0xcda ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
 
-.debug_str      0x0000000000000000    0xbc105
+.debug_str      0x0000000000000000    0xbc0fc
  .debug_str     0x0000000000000000    0xba818 ./Core/Src/gpio.o
                                       0xbaa8b (size before relaxing)
  .debug_str     0x00000000000ba818      0x35b ./Core/Src/main.o
                                       0xbad61 (size before relaxing)
- .debug_str     0x00000000000bab73      0x1bc ./Core/Src/nokia5110_LCD.o
-                                      0xbac7c (size before relaxing)
- .debug_str     0x00000000000bad2f       0x2c ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_str     0x00000000000bab73      0x1b3 ./Core/Src/nokia5110_LCD.o
+                                      0xbac73 (size before relaxing)
+ .debug_str     0x00000000000bad26       0x2c ./Core/Src/stm32f4xx_hal_msp.o
                                       0xba9c0 (size before relaxing)
- .debug_str     0x00000000000bad5b       0xc9 ./Core/Src/stm32f4xx_it.o
+ .debug_str     0x00000000000bad52       0xc9 ./Core/Src/stm32f4xx_it.o
                                       0xba946 (size before relaxing)
- .debug_str     0x00000000000bae24       0xdb ./Core/Src/system_stm32f4xx.o
+ .debug_str     0x00000000000bae1b       0xdb ./Core/Src/system_stm32f4xx.o
                                       0xbaa70 (size before relaxing)
- .debug_str     0x00000000000baeff       0x36 ./Core/Startup/startup_stm32f407vgtx.o
+ .debug_str     0x00000000000baef6       0x36 ./Core/Startup/startup_stm32f407vgtx.o
                                          0x5a (size before relaxing)
- .debug_str     0x00000000000baf35      0xb07 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_str     0x00000000000baf2c      0xb07 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
                                       0xbb5f4 (size before relaxing)
- .debug_str     0x00000000000bba3c      0x365 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_str     0x00000000000bba33      0x365 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
                                       0xbb327 (size before relaxing)
- .debug_str     0x00000000000bbda1      0x131 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_str     0x00000000000bbd98      0x131 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
                                       0xbabeb (size before relaxing)
- .debug_str     0x00000000000bbed2      0x233 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_str     0x00000000000bbec9      0x233 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
                                       0xbaea4 (size before relaxing)
 
 .comment        0x0000000000000000       0x50
@@ -2970,18 +2968,18 @@ LOAD d:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .comment       0x0000000000000050       0x51 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
  .comment       0x0000000000000050       0x51 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
 
-.debug_frame    0x0000000000000000     0x11ec
+.debug_frame    0x0000000000000000     0x11c8
  .debug_frame   0x0000000000000000       0x34 ./Core/Src/gpio.o
  .debug_frame   0x0000000000000034       0x6c ./Core/Src/main.o
- .debug_frame   0x00000000000000a0      0x3c0 ./Core/Src/nokia5110_LCD.o
- .debug_frame   0x0000000000000460       0x38 ./Core/Src/stm32f4xx_hal_msp.o
- .debug_frame   0x0000000000000498      0x104 ./Core/Src/stm32f4xx_it.o
- .debug_frame   0x000000000000059c       0x58 ./Core/Src/system_stm32f4xx.o
- .debug_frame   0x00000000000005f4      0x374 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_frame   0x0000000000000968      0x498 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_frame   0x0000000000000e00      0x14c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_frame   0x0000000000000f4c      0x1f4 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_frame   0x0000000000001140       0x2c d:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
- .debug_frame   0x000000000000116c       0x20 d:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
- .debug_frame   0x000000000000118c       0x2c d:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x00000000000011b8       0x34 d:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00000000000000a0      0x39c ./Core/Src/nokia5110_LCD.o
+ .debug_frame   0x000000000000043c       0x38 ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_frame   0x0000000000000474      0x104 ./Core/Src/stm32f4xx_it.o
+ .debug_frame   0x0000000000000578       0x58 ./Core/Src/system_stm32f4xx.o
+ .debug_frame   0x00000000000005d0      0x374 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_frame   0x0000000000000944      0x498 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_frame   0x0000000000000ddc      0x14c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_frame   0x0000000000000f28      0x1f4 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_frame   0x000000000000111c       0x2c d:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x0000000000001148       0x20 d:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000000000001168       0x2c d:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000000000001194       0x34 d:/st/stm32cubeide_1.9.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)

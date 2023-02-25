@@ -131,7 +131,7 @@ void LCD_putChar(char c){
  * @param y: starting point on the y-axis (line)
  */
 void LCD_print(char *str, uint8_t x, uint8_t y){
-  LCD_goXY(x, y);
+  LCD_SetCursor(x, y);
   while(*str){
     LCD_putChar(*str++);
   }
@@ -152,18 +152,13 @@ void LCD_clrScr(){
  * @param x: position on the x-axis (column)
  * @param y: position on the y-axis (line)
  */
-void LCD_goXY(uint8_t x, uint8_t y){
-	//x = 6 * x;
-	//y = 8 * y;
-  LCD_write(0x80 | x, LCD_COMMAND); //Column.
-  LCD_write(0x40 | y, LCD_COMMAND); //Row.
-}
+
 
 /*
  * @brief Updates the entire screen according to lcd.buffer
  */
 void LCD_refreshScr(){
-  LCD_goXY(LCD_SETXADDR, LCD_SETYADDR);
+  LCD_SetCursor(LCD_SETXADDR, LCD_SETYADDR);
   for(int i = 0; i < 6; i++){
     for(int j = 0; j < LCD_WIDTH; j++){
       LCD_write(lcd.buffer[(i * LCD_WIDTH) + j], LCD_DATA);
@@ -183,7 +178,7 @@ void LCD_refreshArea(uint8_t xmin, uint8_t ymin, uint8_t xmax, uint8_t ymax){
     if(i * 8 > ymax){
       break;
     }
-    //LCD_goXY(xmin, i);
+    //LCD_SetCursor(xmin, i);
     LCD_write(LCD_SETYADDR | i, LCD_COMMAND);
     LCD_write(LCD_SETXADDR | xmin, LCD_COMMAND);
     for(int j = xmin; j <= xmax; j++){
