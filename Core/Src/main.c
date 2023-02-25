@@ -103,11 +103,7 @@ int main(void)
 
   //LCD_print(str, 0, 0);
   LCD_SetCursor(0, 2);
-  for (int var = 0; var < 6; ++var) {
-
-    LCD_write(str[var],LCD_DATA);
-
-  }
+  LCD_WriteCustomChar(str);
 
  // LCD_goXY(15, 0);
  // HAL_Delay(5);

@@ -22,3 +22,4 @@
 ../Core/Src/nokia5110_LCD.c:317:6:LCD_drawLine	80	static
 ../Core/Src/nokia5110_LCD.c:396:6:LCD_drawRectangle	24	static
 ../Core/Src/nokia5110_LCD.c:406:6:LCD_SetCursor	16	static
+../Core/Src/nokia5110_LCD.c:417:6:LCD_WriteCustomChar	24	static

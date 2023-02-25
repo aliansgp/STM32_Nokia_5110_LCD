@@ -127,9 +127,9 @@ void LCD_drawHLine(int x, int y, int l);
 void LCD_drawVLine(int x, int y, int l);
 void LCD_drawLine(int x1, int y1, int x2, int y2);
 void LCD_drawRectangle(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2);
-//////////////////////////////////////////////////////////////////////////////////////
+////////////////////////custom functions/////////////////////////////////////////////
 void LCD_SetCursor(unsigned char newX, unsigned char newY);
-
+void LCD_WriteCustomChar(uint8_t *str);
 
 
 #endif
