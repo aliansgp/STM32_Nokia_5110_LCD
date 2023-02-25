@@ -69,6 +69,8 @@
 #define LCD_HEIGHT 48
 #define LCD_SIZE LCD_WIDTH * LCD_HEIGHT / 8
 
+
+
 /*
  * @brief LCD parameters
  */
@@ -129,7 +131,7 @@ void LCD_drawLine(int x1, int y1, int x2, int y2);
 void LCD_drawRectangle(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2);
 ////////////////////////custom functions/////////////////////////////////////////////
 void LCD_SetCursor(unsigned char newX, unsigned char newY);
-void LCD_WriteCustomChar(uint8_t *str);
-
-
+void LCD_WriteCustomChar(uint8_t *str,int len);
+int LCD_WriteString(int x, int y, char *szMsg, int iSize);
+int strlen(char *s);
 #endif

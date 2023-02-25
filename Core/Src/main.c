@@ -102,9 +102,10 @@ int main(void)
 
 
   //LCD_print(str, 0, 0);
-  LCD_SetCursor(0, 2);
-  LCD_WriteCustomChar(str);
-
+  //LCD_SetCursor(0, 2);
+  //LCD_WriteCustomChar(str, 6);
+  LCD_WriteString(1, 1, "t1", 1);
+  LCD_print("tl", 5, 5);
  // LCD_goXY(15, 0);
  // HAL_Delay(5);
   //LCD_print("Hello World!", 0, 15);

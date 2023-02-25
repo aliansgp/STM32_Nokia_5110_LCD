@@ -3,7 +3,7 @@
 struct LCD_att lcd;
 struct LCD_GPIO lcd_gpio;
 
-
+static int iScreenOffset; // current write offset of screen data
 /*----- GPIO Functions -----*/
 /*
  * @brief Set functions for GPIO pins used
@@ -116,6 +116,7 @@ void LCD_invertText(bool mode){
  * @brief Puts one char on the current position of LCD's cursor
  * @param c: char to be printed
  */
+
 void LCD_putChar(char c){
   for(int i = 0; i < 6; i++){
     if(lcd.inverttext != true)
@@ -228,7 +229,7 @@ void N5110_write_y_byte(uint8_t x,uint8_t y,uint8_t data[8],uint8_t color){
 
     }
 }
-
+/*
 void N5110_show_pic (uint8_t *pic,uint8_t xpos ,uint8_t ypos,uint8_t color){
 
   uint8_t data [8];
@@ -253,7 +254,7 @@ void N5110_show_pic (uint8_t *pic,uint8_t xpos ,uint8_t ypos,uint8_t color){
 
  }
 }
-
+*/
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -409,14 +410,16 @@ void LCD_SetCursor(unsigned char newX, unsigned char newY){
   }
   // multiply newX by 7 because each character is 7 columns wide
 
-  LCD_write(0x80|(newX*7), LCD_COMMAND); // setting bit 7 updates X-position
-  LCD_write(0x40|newY, LCD_COMMAND);     // setting bit 6 updates Y-position
+
+  LCD_write(0x80 | newX, LCD_COMMAND); // setting bit 7 updates X-position
+  LCD_write(0x40 | newY, LCD_COMMAND);     // setting bit 6 updates Y-position
+  iScreenOffset = (newY*84)+newX;
 
 }
 
-void LCD_WriteCustomChar(uint8_t *str){
+void LCD_WriteCustomChar(uint8_t *str,int len){
 
-for (int var = 0; var < 6; ++var) {
+for (int var = 0; var < len; ++var) {
 
   LCD_write(str[var],LCD_DATA);
 
@@ -424,6 +427,68 @@ for (int var = 0; var < 6; ++var) {
 
 }
 
+int strlen(char *s)
+{
+	int i;
+
+	i= 0;
+	while(s[i]) {
+		i+= 1;
+	}
+
+	return i;
+}
+/*	x => starting x
+ * 	y => starting y
+ *  szMsg => String
+ *  iSize => font size -> 2 for big, 1 for normal, else for small
+ */
+int LCD_WriteString(int x, int y, char *szMsg, int iSize)
+{
+int i, iLen;
+unsigned char *s;
+
+	iLen = strlen(szMsg);
+	if (iSize == 2) // draw 16x32 font
+	{
+		if (iLen+x > 5) iLen = 5-x;
+		if (iLen < 0) return -1;
+		for (i=0; i<iLen; i++)
+		{
+			s = &ucFont[9728 + (unsigned char)szMsg[i]*64];
+			LCD_SetCursor(x+(i*16), y);
+			LCD_WriteCustomChar(s, 16);
+			LCD_SetCursor(x+(i*16), y+1);
+			LCD_WriteCustomChar(s+1, 16);
+			LCD_SetCursor(x+(i*16), y+2);
+			LCD_WriteCustomChar(s+32, 16);
+		}
+	}
+	else if (iSize == 1) // draw 8x8 font
+	{
+		LCD_SetCursor(x*8, y);
+		if ((8*iLen) + x*8 > 84) iLen = (84 - x)/8; // can't display it all
+		if (iLen < 0)return -1;
+
+		for (i=0; i<iLen; i++)
+		{
+			s = &ucFont[(unsigned char)szMsg[i] * 8];
+			LCD_WriteCustomChar(s, 8); // write character pattern
+		}
+	}
+	else // small
+	{
+		LCD_SetCursor(x*6, y);
+		if ((6*iLen) + x*6 > 84) iLen = (84 - x)/6;
+		if (iLen < 0) return -1;
+		for (i=0; i<iLen; i++)
+		{
+			s = &ucSmallFont[(unsigned char)szMsg[i]*6];
+			LCD_WriteCustomChar(s, 6);
+		}
+	}
+	return 0;
+} /* nokiaWriteString() */
 
 
 
