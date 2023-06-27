@@ -20,7 +20,6 @@
 #define LCD_SIZE LCD_WIDTH * LCD_HEIGHT / 8
 
 
-
 /*
  * @brief LCD parameters
  */
